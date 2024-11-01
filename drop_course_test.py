@@ -1,1 +1,0 @@
-print("drop course test")
