@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <script>
+        // 如果有錯誤訊息，則顯示警告
+        {% if error %}
+            alert("{{ error }}");
+        {% endif %}
+    </script>
+</head>
+<body>
+    <h1>請登入</h1>
+    <form method="POST">
+        <label for="acc">帳號</label>
+        <input type="text" id="acc" name="acc">
+        <label for="psw">密碼</label>
+        <input type="text" id="psw" name="psw">
+        {% if 'login' in session %}
+            <button type="submit">logout</button>
+        {% else %}
+            <button type="submit">login</button>
+        {% endif %}
+    </form>
+</body>
+</html>

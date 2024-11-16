@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>新增課程</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        label {
+            font-size: 16px;
+            display: block;
+            margin-top: 10px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .hint {
+            font-size: 12px;
+            color: gray;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            const courseName = document.getElementById('course_name').value.trim();
+            const courseDescription = document.getElementById('course_description').value.trim();
+            const courseLocation = document.getElementById('course_location').value.trim();
+            const maxStudents = document.getElementById('max_students').value;
+            const selectedPeriods = document.querySelectorAll('input[name^="day_of_week"]:checked');
+
+            if (courseName === '' || courseDescription === '' || courseLocation === '' || maxStudents === '') {
+                alert("所有欄位皆為必填！");
+                return false;
+            }
+
+            if (courseName.length > 50) {
+                alert("課程名稱不能超過50字！");
+                return false;
+            }
+
+            if (courseDescription.length > 200) {
+                alert("課程大綱不能超過200字！");
+                return false;
+            }
+
+            if (courseLocation.length > 20) {
+                alert("地點不能超過20字！");
+                return false;
+            }
+
+            if (maxStudents < 5 || maxStudents > 250) {
+                alert("選課人數上限應在5到250人之間！");
+                return false;
+            }
+
+            if (selectedPeriods.length === 0) {
+                alert("請至少選擇一個課程時間！");
+                return false;
+            }
+
+            return confirm("確認送出?");
+        }
+    </script>
+</head>
+<body>
+    <h1>新增課程</h1>
+    <form onsubmit="return validateForm()" action="{{ url_for('add_course') }}" method="POST">
+        <div class="form-group">
+            <label for="course_name">課程名稱:</label>
+            <input type="text" id="course_name" name="course_name" maxlength="50" required>
+            <div class="hint">最多 50 字</div>
+        </div>
+        <div class="form-group">
+            <label for="credits">學分數:</label>
+            <input type="number" id="credits" name="credits" min="1" max="10" required>
+            <div class="hint">請輸入 1 至 10 學分</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="compulsory">必選修:</label>
+            <select id="compulsory" name="compulsory" required>
+                <option value="必修">必修</option>
+                <option value="選修">選修</option>
+            </select>
+            <div class="hint">請選擇此課程為必修或選修</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="course_description">課程大綱:</label>
+            <textarea id="course_description" name="description" maxlength="200" required></textarea>
+            <div class="hint">最多 200 字</div>
+        </div>
+
+        <div class="form-group">
+            <label>課程時間:</label>
+            {% for day in ["星期一", "星期二", "星期三", "星期四", "星期五"] %}
+                <strong>{{ day }}:</strong><br>
+                {% for i in range(1, 15) %}
+                    <input type="checkbox" name="day_of_week[{{ day }}]" value="{{ i }}"> 第{{ i }}節
+                {% endfor %}
+                <br>
+            {% endfor %}
+            <div class="hint">請至少選擇一個時段</div>
+        </div>
+
+        <div class="form-group">
+            <label for="course_location">地點:</label>
+            <input type="text" id="course_location" name="location" maxlength="20" required>
+            <div class="hint">最多 20 字</div>
+        </div>
+
+        <div class="form-group">
+            <label for="max_students">選課人數上限:</label>
+            <input type="number" id="max_students" name="max_students" min="5" max="250" required>
+            <div class="hint">範圍: 5 至 250 人</div>
+        </div>
+
+        <button type="submit">送出</button>
+    </form>
+</body>
+</html>
