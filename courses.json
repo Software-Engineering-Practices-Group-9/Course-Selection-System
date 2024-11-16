@@ -1,49 +1,7 @@
 [
     {
-        "course_id": "0007",
-        "name": "12",
-        "compulsory": "必修",
-        "act_students": 0,
-        "max_students": "6",
-        "credits": "2",
-        "location": "2",
-        "description": "1",
-        "day_of_week": {
-            "星期一": [
-                "1"
-            ],
-            "星期二": [],
-            "星期三": [],
-            "星期四": [],
-            "星期五": []
-        },
-        "instructor": "預設老師"
-    },
-    {
-        "course_id": "0002",
-        "name": "軟體測試",
-        "compulsory": "選修",
-        "act_students": 0,
-        "max_students": "60",
-        "credits": "3",
-        "location": "資電123",
-        "description": "testing",
-        "day_of_week": {
-            "星期一": [],
-            "星期二": [],
-            "星期三": [
-                "5",
-                "6",
-                "7"
-            ],
-            "星期四": [],
-            "星期五": []
-        },
-        "instructor": "預設老師"
-    },
-    {
         "course_id": "0003",
-        "name": "123",
+        "course_name": "123",
         "compulsory": "必修",
         "act_students": 0,
         "max_students": 67,
@@ -56,6 +14,46 @@
             "星期三": [
                 "11"
             ],
+            "星期四": [],
+            "星期五": []
+        },
+        "instructor": "預設老師"
+    },
+    {
+        "course_id": "0004",
+        "course_name": "1",
+        "compulsory": "必修",
+        "act_students": 0,
+        "max_students": 22,
+        "credits": 2,
+        "location": "2",
+        "description": "2",
+        "day_of_week": {
+            "星期一": [],
+            "星期二": [],
+            "星期三": [],
+            "星期四": [],
+            "星期五": [
+                "14"
+            ]
+        },
+        "instructor": "預設老師"
+    },
+    {
+        "course_id": "0005",
+        "course_name": "1",
+        "compulsory": "必修",
+        "act_students": 0,
+        "max_students": 23,
+        "credits": 2,
+        "location": "2",
+        "description": "3",
+        "day_of_week": {
+            "星期一": [
+                "10"
+            ],
+            "星期二": [],
+            "星期三": [],
             "星期四": [],
             "星期五": []
         },
