@@ -1,0 +1,15 @@
+[
+    {
+        "Coursename": "軟體工程",
+        "Coursetime": 3,
+        "Coursecredits": 3,
+        "maxiumlimits": 60,
+        "Professor": "許懷中",
+        "Addedstudents": [
+            "D1185284",
+            "D1185285",
+            "D1185280",
+            "D1185286"
+        ]
+    }
+]
