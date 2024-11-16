@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>學生清單</title>
+</head>
+<body>
+    <h1>學生清單</h1>
+    <ul>
+        {% for student in students %}
+        <li>
+            <a href="{{ url_for('student_course.student_page', student_id=student['id']) }}">
+                {{ student['name'] }} ({{ student['id'] }}) - {{ student['department'] }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
