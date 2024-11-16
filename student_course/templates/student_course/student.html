@@ -9,6 +9,9 @@
     <p>學生姓名：{{ student['name'] }}</p>
     <p>學系：{{ student['department'] }}</p>
     <h2>選課清單</h2>
+
+    <!-- 已選課成寫在這 -->
+
     <p>目前無選課資料。</p>
 
 
@@ -59,6 +62,8 @@
                         <p>{{ schedule }}</p>
                     {% endfor %}
                 </td>
+
+                
             </tr>
         {% endfor %}
         </tbody>
