@@ -5,7 +5,7 @@ import json
 
 student_course_bp = Blueprint('student_course', __name__, template_folder='templates')
 
-def load_courses():
+def load_courses(): 
     course_file = "database/course.json"
     try:
         with open(course_file, 'r', encoding='utf-8') as file:
@@ -17,8 +17,8 @@ def load_courses():
     except FileNotFoundError:
         return []
 
-def load_student_courses(student_id):
-    course_file = f"database/{student_id}_courses.json"
+def load_student_courses(id):
+    course_file = f"database/{id}_courses.json"
     try:
         with open(course_file, 'r', encoding='utf-8') as file:
             return json.load(file)
@@ -28,12 +28,12 @@ def load_student_courses(student_id):
 
 # -------------------------------- 處理課程各功能 --------------------------------
 
-@student_course_bp.route('/id=<student_id>')
-def student_page(student_id):
+@student_course_bp.route('/id=<id>')
+def student_page(id):
     accounts = load_accounts()
-    student = next((acc for acc in accounts if acc['id'] == student_id), None)
+    student = next((acc for acc in accounts if acc['id'] == id), None)
 
-    student_courses = load_student_courses(student_id)
+    student_courses = load_student_courses(id)
 
     # 載入所有課程資料
     courses = load_courses()

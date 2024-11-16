@@ -19,12 +19,12 @@ def login():
         for account in accounts:
             if account['id'] == user_id and account['password'] == password:
                 if account['role'] == '學生':
-                    return redirect(url_for('student_course.student_page', student_id=user_id))
+                    return redirect(url_for('student_course.student_page', id=user_id))
                 elif account['role'] == '系辦助教':
-                    return redirect(url_for('student_list.student_list', student_id=user_id))
-                # elif account['role'] == '教授':  # 教授
-                #     return redirect(url_for('course_list.course_list', student_id=user_id))
+                    return redirect(url_for('student_list.student_list', id=user_id))
+                elif account['role'] == '教授':
+                    return redirect(url_for('create_course.home', id=user_id))
                 elif account['role'] == '教務處人員':
-                    return redirect(url_for('course_list.course_list', student_id=user_id))
+                    return redirect(url_for('course_list.course_list', id=user_id))
         return render_template('login_system/login.html', error="帳號或密碼錯誤")
     return render_template('login_system/login.html')

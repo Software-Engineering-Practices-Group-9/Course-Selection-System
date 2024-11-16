@@ -16,7 +16,7 @@
 
 
     <h2>查詢課程</h2>
-    <form method="get" action="{{ url_for('student_course.student_page', student_id=student['id']) }}">
+    <form method="get" action="{{ url_for('student_course.student_page', id=student['id']) }}">
         <div>
             <label for="course_id">課程代碼:</label>
             <input type="text" id="course_id" name="course_id" placeholder="輸入課程代碼" value="{{ request.args.get('course_id', '') }}">

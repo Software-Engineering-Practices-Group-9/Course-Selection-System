@@ -33,5 +33,26 @@
         "role": "教務處人員",
         "password": "1130123",
         "department": "教務處"
+    },
+    {
+        "id": "T1130013",
+        "name": "許芳榮",
+        "role": "教授",
+        "password": "1130013",
+        "department": "資訊工程學系"
+    },
+    {
+        "id": "T1130018",
+        "name": "許懷中",
+        "role": "教授",
+        "password": "1130018",
+        "department": "資訊工程學系"
+    },
+    {
+        "id": "T1130019",
+        "name": "劉宗杰",
+        "role": "教授",
+        "password": "1130019",
+        "department": "資訊工程學系"
     }
 ]
