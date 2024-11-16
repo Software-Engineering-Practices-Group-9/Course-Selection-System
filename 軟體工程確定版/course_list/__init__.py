@@ -1,0 +1,1 @@
+from .course_list import course_list_bp

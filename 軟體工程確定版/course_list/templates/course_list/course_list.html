@@ -1,0 +1,19 @@
+<!-- templates/course_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>課程清單</title>
+</head>
+<body>
+    <h1>歡迎，{{ user['name'] }}!</h1>
+    <p>帳號: {{ user['id'] }} | 角色: {{ user['role'] }} | 部門: {{ user['department'] }}</p>
+
+    <h2>所有課程</h2>
+    <ul>
+        {% for course in courses %}
+        <li>{{ course['course_name'] }} ({{ course['course_id'] }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

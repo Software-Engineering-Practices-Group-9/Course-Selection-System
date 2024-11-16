@@ -1,0 +1,91 @@
+[
+    {
+        "course_id": "0001",
+        "name": "電子學",
+        "compulsory": "必修",
+        "act_students": 0,
+        "max_students": "15",
+        "credits": "8",
+        "location": "資電123",
+        "description": "1",
+        "day_of_week": {
+            "星期一": [
+                "1"
+            ],
+            "星期二": [],
+            "星期三": [],
+            "星期四": [],
+            "星期五": []
+        },
+        "instructor": "劉宗杰"
+    },
+    {
+        "course_id": "0002",
+        "name": "微處理機系統 ",
+        "compulsory": "必修",
+        "act_students": 0,
+        "max_students": "80",
+        "credits": "3",
+        "location": "資電404 / 資電104",
+        "description": "本課程介紹微處理機系統結構, 記憶體元件, 記憶體介面, I/O設備, I/O介面, 以及I/O方法之Polling I/O, Interrupt I/O, DMA I/O。\r\n",
+        "day_of_week": {
+            "星期一": [
+                "7",
+                "8"
+            ],
+            "星期二": [],
+            "星期三": [
+                "8"
+            ],
+            "星期四": [],
+            "星期五": []
+        },
+        "instructor": "預設老師"
+    },
+    {
+        "course_id": "0003",
+        "name": "神學",
+        "compulsory": "必修",
+        "act_students": 0,
+        "max_students": "5",
+        "credits": "5",
+        "location": "天后宮",
+        "description": "非常的神",
+        "day_of_week": {
+            "星期一": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "星期二": [],
+            "星期三": [],
+            "星期四": [],
+            "星期五": []
+        },
+        "instructor": "預設老師"
+    },
+    {
+        "course_id": "0004",
+        "name": "12",
+        "compulsory": "必修",
+        "act_students": 0,
+        "max_students": "222",
+        "credits": "6",
+        "location": "2",
+        "description": "3",
+        "day_of_week": {
+            "星期一": [],
+            "星期二": [],
+            "星期三": [],
+            "星期四": [],
+            "星期五": [
+                "11"
+            ]
+        },
+        "instructor": "劉宗杰"
+    }
+]

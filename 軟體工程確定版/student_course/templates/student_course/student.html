@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>學生資訊</title>
+</head>
+<body>
+    <h1>{{ student['id'] }} 的選課頁面</h1>
+    <p>學生姓名：{{ student['name'] }}</p>
+    <p>學系：{{ student['department'] }}</p>
+    <h2>選課清單</h2>
+
+    <!-- 已選課成寫在這 -->
+
+    <p>目前無選課資料。</p>
+
+
+    <h2>查詢課程</h2>
+    <form method="get" action="{{ url_for('student_course.student_page', student_id=student['id']) }}">
+        <div>
+            <label for="course_id">課程代碼:</label>
+            <input type="text" id="course_id" name="course_id" placeholder="輸入課程代碼" value="{{ request.args.get('course_id', '') }}">
+        </div>
+        <div>
+            <label for="course_name">課程名稱:</label>
+            <input type="text" id="course_name" name="course_name" placeholder="輸入課程名稱" value="{{ request.args.get('course_name', '') }}">
+        </div>
+        <div>
+            <label for="instructor">教授:</label>
+            <input type="text" id="instructor" name="instructor" placeholder="輸入教授名稱" value="{{ request.args.get('instructor', '') }}">
+        </div>
+        <div>
+            <label for="day_of_week">上課星期:</label>
+            <input type="text" id="day_of_week" name="day_of_week" placeholder="輸入星期（例如：星期一）" value="{{ request.args.get('day_of_week', '') }}">
+        </div>
+        <div>
+            <label for="time_slot">上課節次:</label>
+            <input type="text" id="time_slot" name="time_slot" placeholder="輸入節次（例如：1,2）" value="{{ request.args.get('time_slot', '') }}">
+        </div>
+        <button type="submit">查詢</button>
+        <button class="btn btn-outline-secondary" type="button" id="clearButton">清除</button>
+    </form>
+
+    <h2>查詢結果</h2>
+    <table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>課程代碼</th>
+                <th>課程名稱</th>
+                <th>教授</th>
+                <th>星期/節次/教室</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for course in courses %}
+            <tr>
+                <td>{{ course['course_id'] }}</td>
+                <td>{{ course['name'] }}</td>
+                <td>{{ course['instructor'] }}</td>
+                <td>
+                    {% for schedule in course['formatted_schedule'] %}
+                        <p>{{ schedule }}</p>
+                    {% endfor %}
+                </td>
+
+                
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+    <script src="/static/js/course_search_clear.js"></script>
+    
+
+</body>
+</html>
