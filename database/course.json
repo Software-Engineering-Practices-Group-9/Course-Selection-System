@@ -1,91 +1,221 @@
 [
     {
-        "course_id": "0001",
-        "name": "電子學",
-        "compulsory": "必修",
+        "course_id": "2274",
+        "course_name": "iOS APP開發",
+        "instructor": "許芳榮",
+        "compulsory": "選修",
+        "credits": 3,
         "act_students": 0,
-        "max_students": "15",
-        "credits": "8",
-        "location": "資電123",
-        "description": "1",
+        "max_students": 17,
         "day_of_week": {
-            "星期一": [
-                "1"
+            "一": [],
+            "二": [
+                "2",
+                "3",
+                "4"
             ],
-            "星期二": [],
-            "星期三": [],
-            "星期四": [],
-            "星期五": []
+            "三": [],
+            "四": [],
+            "五": []
         },
-        "instructor": "劉宗杰"
+        "location": "行204(電腦實習室)",
+        "description": "本課程之目的在教授學生使用Swift程式語言開發iOS應用程式的技能。課程涵蓋iOS開發環境的設置、基本的程式設計概念、介面設計、資料儲存和API使用等主題。學生將透過實作專案，學習開發iOS應用程式的各個階段，包括設計、開發、測試和部署。課程還強調最佳實踐和使用最新的iOS開發工具和技術，以及與使用者體驗和介面設計相關的重要概念。完成課程後，學生將具備開發iOS應用程式的技能，並能夠創建具有吸引"
     },
     {
-        "course_id": "0002",
-        "name": "微處理機系統 ",
-        "compulsory": "必修",
+        "course_id": "1450",
+        "course_name": "程式設計與問題解決",
+        "instructor": "葉春秀",
+        "compulsory": "選修",
+        "credits": 2,
         "act_students": 0,
-        "max_students": "80",
-        "credits": "3",
-        "location": "資電404 / 資電104",
-        "description": "本課程介紹微處理機系統結構, 記憶體元件, 記憶體介面, I/O設備, I/O介面, 以及I/O方法之Polling I/O, Interrupt I/O, DMA I/O。\r\n",
+        "max_students": 60,
         "day_of_week": {
-            "星期一": [
+            "一": [],
+            "二": [
+                "9",
+                "10"
+            ],
+            "三": [],
+            "四": [],
+            "五": []
+        },
+        "location": "資電330",
+        "description": "本課程以介紹各種解題演算法為基礎，以期補強和提升學生的程式設計能力。教學上以實作為主，以大學程式能力檢定(Collegiate Programming Examination, CPE)和國際大學生程式設計競賽(International Collegiate Programming Contest, ICPC)相關題庫做為課程參考。本課程供四下未通過CPE測驗的學生優先選修。"
+    },
+    {
+        "course_id": "1434",
+        "course_name": "資料科學實務",
+        "instructor": "許懷中",
+        "compulsory": "選修",
+        "credits": 3,
+        "act_students": 0,
+        "max_students": 60,
+        "day_of_week": {
+            "一": [],
+            "二": [
+                "3",
+                "4"
+            ],
+            "三": [
+                "2"
+            ],
+            "四": [],
+            "五": []
+        },
+        "location": "紀207(電腦實習室) 資電330",
+        "description": "本課程主要目的是教導學生開發社群媒體Bot的知識與能力。本課程將介紹現有社群媒體Bot的狀況並進行分析、指導學生進行社群媒體Bot的創意發想，並進行實作、上架與維運。在完成此一課程後，學生將能夠獨立開發社群媒體Bot，並了解Bot的維運方式。"
+    },
+    {
+        "course_id": "1432",
+        "course_name": "軟體工程開發實務",
+        "instructor": "許懷中",
+        "compulsory": "選修",
+        "credits": 3,
+        "act_students": 0,
+        "max_students": 56,
+        "day_of_week": {
+            "一": [],
+            "二": [],
+            "三": [
+                "6",
                 "7",
                 "8"
             ],
-            "星期二": [],
-            "星期三": [
-                "8"
-            ],
-            "星期四": [],
-            "星期五": []
+            "四": [],
+            "五": []
         },
-        "instructor": "預設老師"
+        "location": "資電330",
+        "description": "介紹軟體工程基本的原則與觀念。學生修習此課後可以學習到軟體工程紀律、專案管理、需求、設計、測試、版本管理及軟體維護等基本觀念。學生可以透過操作軟體工程工具的方式學習這些概念。"
     },
     {
-        "course_id": "0003",
-        "name": "神學",
-        "compulsory": "必修",
+        "course_id": "1413",
+        "course_name": "物件導向設計",
+        "instructor": "許懷中",
+        "compulsory": "選修",
+        "credits": 2,
         "act_students": 0,
-        "max_students": "5",
-        "credits": "5",
-        "location": "天后宮",
-        "description": "非常的神",
+        "max_students": 74,
         "day_of_week": {
-            "星期一": [
-                "1",
-                "2",
+            "一": [],
+            "二": [],
+            "三": [],
+            "四": [],
+            "五": [
+                "7",
+                "8"
+            ]
+        },
+        "location": "科航202",
+        "description": "本課程主要內容介紹物件導向的基本觀念與程式技巧。學生將學習物件導向設計的概念、原則、方法與實作。修畢此課後，學生應具備使用物件導向特性，例如物件的封裝、繼承、多型等技巧來開發程式。"
+    },
+    {
+        "course_id": "1414",
+        "course_name": "物件導向設計實習",
+        "instructor": "許懷中",
+        "compulsory": "必修",
+        "credits": 1,
+        "act_students": 0,
+        "max_students": 76,
+        "day_of_week": {
+            "一": [],
+            "二": [],
+            "三": [],
+            "四": [],
+            "五": [
+                "9",
+                "10"
+            ]
+        },
+        "location": "紀207(電腦實習室)",
+        "description": "本課程主要內容介紹物件導向的基本觀念與程式技巧。學生將學習物件導向設計的概念、原則、方法與實作。修畢此課後，學生應具備使用物件導向特性，例如物件的封裝、繼承、多型等技巧來開發程式"
+    },
+    {
+        "course_id": "1409",
+        "course_name": "資料結構",
+        "instructor": "葉春秀",
+        "compulsory": "必修",
+        "credits": 3,
+        "act_students": 0,
+        "max_students": 60,
+        "day_of_week": {
+            "一": [
                 "3",
-                "4",
-                "5",
+                "4"
+            ],
+            "二": [
+                "8"
+            ],
+            "三": [],
+            "四": [],
+            "五": []
+        },
+        "location": " 資電512 資電B04",
+        "description": "本課程的目標在於讓學生經由實習課程的進行，學習程式設計的技巧與訓練程式設計的能力。本課程主要訓練學生(1)能夠以高階的抽象型式適當地來定義需要的資料結構及演算法，(2)能夠設計各種資料結構實作方法，(3)能夠正確利用各種資料結構於各種程式的練習，以及(4)具有分析各種資料結構運算時間複雜度的能力。"
+    },
+    {
+        "course_id": "1408",
+        "course_name": "資料結構實習",
+        "instructor": "葉春秀",
+        "compulsory": "必修",
+        "credits": 1,
+        "act_students": 0,
+        "max_students": 60,
+        "day_of_week": {
+            "一": [],
+            "二": [],
+            "三": [
+                "6",
+                "7",
+                "8"
+            ],
+            "四": [],
+            "五": []
+        },
+        "location": "資電234(電腦實習室)",
+        "description": "本課程的目標在於讓學生經由實習課程的進行，學習程式設計的技巧與應用資料結構的能力。"
+    },
+    {
+        "course_id": "1402",
+        "course_name": "通訊與網路概論",
+        "instructor": "劉宗杰",
+        "compulsory": "必修",
+        "credits": 3,
+        "act_students": 0,
+        "max_students": 63,
+        "day_of_week": {
+            "一": [
+                "4"
+            ],
+            "二": [
                 "6",
                 "7"
             ],
-            "星期二": [],
-            "星期三": [],
-            "星期四": [],
-            "星期五": []
+            "三": [],
+            "四": [],
+            "五": []
         },
-        "instructor": "預設老師"
+        "location": "科航205 資電410",
+        "description": "本課程主要在介紹網路通訊的概念。藉由介紹數位通訊原理及技術、訊息編碼、網路協定原理、網路架構及其理論基礎使學生瞭解數位通訊、網路協定及網路技術與其架構並認識TCP/IP協定架構和網際網路的原理。"
     },
     {
-        "course_id": "0004",
-        "name": "12",
-        "compulsory": "必修",
+        "course_id": "1436",
+        "course_name": "網路程式設計",
+        "instructor": "劉宗杰",
+        "compulsory": "選修",
+        "credits": 2,
         "act_students": 0,
-        "max_students": "222",
-        "credits": "6",
-        "location": "2",
-        "description": "3",
+        "max_students": 51,
         "day_of_week": {
-            "星期一": [],
-            "星期二": [],
-            "星期三": [],
-            "星期四": [],
-            "星期五": [
-                "11"
-            ]
+            "一": [],
+            "二": [
+                "3",
+                "4"
+            ],
+            "三": [],
+            "四": [],
+            "五": []
         },
-        "instructor": "劉宗杰"
+        "location": "資電108",
+        "description": "介紹各種主從式架構下網路程式設計及實作技巧"
     }
 ]

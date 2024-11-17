@@ -9,7 +9,7 @@
     <ul>
         {% for student in students %}
         <li>
-            <a href="{{ url_for('student_course.student_page', student_id=student['id']) }}">
+            <a href="{{ url_for('student_course.student_page', id=student['id']) }}">
                 {{ student['name'] }} ({{ student['id'] }}) - {{ student['department'] }}
             </a>
         </li>

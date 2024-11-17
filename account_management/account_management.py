@@ -16,17 +16,17 @@ def save_accounts(accounts):
         json.dump(accounts, f, indent=4, ensure_ascii=False)
 
 
-def create_student_courses_file(student_id):
+def create_student_courses_file(id):
     # 確保資料夾存在
     folder_path = 'database/student_data'
     os.makedirs(folder_path, exist_ok=True)
     
     # 學生課程檔案路徑
-    file_path = os.path.join(folder_path, f"{student_id}_courses.json")
+    file_path = os.path.join(folder_path, f"{id}_courses.json")
     
     # 預設的課程資料結構
     default_courses = {
-        "student_id": student_id,
+        "id": id,
         "courses": []
     }
     
@@ -45,10 +45,10 @@ def index():
 def register():
     data = request.form
     role = data.get('role')
-    student_id = data.get('id')
+    id = data.get('id')
 
     new_account = {
-        "id": student_id,
+        "id": id,
         "name": data.get('name'),
         "role": role,
         "password": data.get('password')
@@ -61,7 +61,7 @@ def register():
     save_accounts(accounts)
 
     if role == '學生':
-        create_student_courses_file(student_id)
+        create_student_courses_file(id)
     
     return redirect(url_for('account_management.index'))
 

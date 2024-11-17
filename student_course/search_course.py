@@ -1,3 +1,4 @@
+import re
 def merge_sessions(sessions):
     if not sessions:
         return []
@@ -14,7 +15,7 @@ def merge_sessions(sessions):
     return merged
 
 def format_schedule(day_of_week, location):
-    locations = location.split(' / ')  # 將教室分成列表
+    locations = re.split(r'[ /]+', location.strip())
     formatted_schedule = []
     location_index = 0  # 教室索引，用於對應 day_of_week
 
