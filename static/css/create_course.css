@@ -81,6 +81,7 @@ tr:hover {
 }
 
 
+<<<<<<< HEAD
 /* 設置課程列表表格容器的最大高度和滾動條 */
 .scrollable-table {
     max-height: 600px;  /* 根據需要調整最大高度 */
@@ -118,6 +119,8 @@ tr:hover {
 
 
 
+=======
+>>>>>>> feature/drop-course
 
 /* add_course.html */
 
