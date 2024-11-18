@@ -1,42 +1,11 @@
-from flask import Blueprint, render_template, request, redirect, url_for, jsonify, flash
+from flask import Blueprint, render_template, request, redirect, url_for, flash
+from utils import create_student_courses_file, load_accounts, save_accounts
 import json
 import os
 
 account_mgmt_bp = Blueprint('account_management', __name__, template_folder='templates')
-DATABASE_PATH = 'database/accounts.json'
 
-def load_accounts():
-    try:
-        with open(DATABASE_PATH, 'r', encoding='utf-8') as file:
-            accounts = json.load(file)
-    except FileNotFoundError:
-        accounts = []
-    return accounts
-
-def save_accounts(accounts):
-    with open(DATABASE_PATH, 'w', encoding='utf-8') as f:
-        json.dump(accounts, f, indent=4, ensure_ascii=False)
-
-
-def create_student_courses_file(id):
-    # 確保資料夾存在
-    folder_path = 'database/student_data'
-    os.makedirs(folder_path, exist_ok=True)
-    
-    # 學生課程檔案路徑
-    file_path = os.path.join(folder_path, f"{id}_courses.json")
-    
-    # 預設的課程資料結構
-    default_courses = {
-        "courses": []
-    }
-    
-    # 保存 JSON 檔案
-    with open(file_path, 'w') as f:
-        json.dump(default_courses, f, indent=4)
-
-# ----------------------------------------------------------------------------------------
-
+# ---------------------------- 帳號管裡主程式 ----------------------------
 @account_mgmt_bp.route('/')
 def index():
     accounts = load_accounts()
@@ -134,10 +103,6 @@ def delete(account_id):
         flash('找不到該帳號，無法刪除！', 'danger')
     
     return redirect(url_for('account_management.index'))
-
-
-
-
 
 @account_mgmt_bp.route('/search', methods=['GET'])
 def search():

@@ -1,12 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, session, url_for
-import json
+from account_management.account_management import load_accounts
 
 login_bp = Blueprint('login', __name__, template_folder='templates')
-DATABASE_PATH = 'database/accounts.json'
-
-def load_accounts():
-    with open(DATABASE_PATH, 'r', encoding='utf-8') as file:
-        return json.load(file)
     
 @login_bp.route('/', methods=['GET', 'POST'])
 def login():
