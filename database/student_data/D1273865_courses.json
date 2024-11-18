@@ -1,3 +1,46 @@
 {
-    "courses": []
+    "courses": [
+        {
+            "compulsory": "必修",
+            "course_id": "1408",
+            "credits": 1,
+            "instructor": "葉春秀",
+            "name": "資料結構實習"
+        },
+        {
+            "compulsory": "選修",
+            "course_id": "1433",
+            "credits": 3,
+            "instructor": "李俊宏",
+            "name": "資料探勘導論"
+        },
+        {
+            "compulsory": "選修",
+            "course_id": "3626",
+            "credits": 2,
+            "instructor": "陳烈武",
+            "name": "網路程式設計"
+        },
+        {
+            "compulsory": "選修",
+            "course_id": "3627",
+            "credits": 1,
+            "instructor": "陳烈武",
+            "name": "網路程式設計實習"
+        },
+        {
+            "compulsory": "選修",
+            "course_id": "1413",
+            "credits": 2,
+            "instructor": "許懷中",
+            "name": "物件導向設計"
+        },
+        {
+            "compulsory": "選修",
+            "course_id": "1414",
+            "credits": 1,
+            "instructor": "許懷中",
+            "name": "物件導向設計實習"
+        }
+    ]
 }

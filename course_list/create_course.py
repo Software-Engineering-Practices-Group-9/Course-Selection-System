@@ -50,6 +50,7 @@ def add_course():
         credits = int(request.form['credits'])
         location = request.form['location']
         description = request.form['description']
+        status = "已開課"
 
         # Initialize an empty dictionary for day_of_week
         day_of_week = {
@@ -77,6 +78,7 @@ def add_course():
 
         # Add the new course data to the courses list
         courses.append({
+            "status": status,
             "course_id": course_id,
             "course_name": course_name,
             "instructor": instructor_name,  # Set the professor's name

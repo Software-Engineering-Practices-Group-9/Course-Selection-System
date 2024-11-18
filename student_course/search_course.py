@@ -1,10 +1,12 @@
 # 此部分放置搜尋需要用到的函式
-def filter_courses(courses, course_id=None, course_name=None, instructor=None, location=None, day_of_week=None, time_slot=None):
-    if not any([course_id, course_name, instructor, location, day_of_week, time_slot]):
+def filter_courses(courses, course_id=None, course_name=None, instructor=None, location=None, day_of_week=None, time_slot=None, status=None):
+    if not any([course_id, course_name, instructor, location, day_of_week, time_slot, status]):
         return courses  # 如果沒有任何查詢條件，返回所有課程
 
     filtered_courses = []
     for course in courses:
+        if status and status not in course['status']:
+            continue
         if course_id and course_id not in course['course_id']:
             continue
         if course_name and course_name not in course['course_name']:
