@@ -1,29 +1,9 @@
 from flask import Blueprint, render_template, request, redirect, url_for, session
 from account_management.account_management import load_accounts
-<<<<<<< HEAD
-import json, os
-
-create_course_bp = Blueprint('create_course', __name__, template_folder='templates')
-
-DATABASE_COURSE_PATH = 'database/course.json'
-
-def load_courses():
-    if os.path.exists(DATABASE_COURSE_PATH):
-        with open(DATABASE_COURSE_PATH, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return []
-
-# 儲存課程資料
-def save_courses(courses):
-    with open(DATABASE_COURSE_PATH, 'w', encoding='utf-8') as f:
-        json.dump(courses, f, ensure_ascii=False, indent=4)
-
-=======
 from utils import save_courses, load_courses
 
 create_course_bp = Blueprint('create_course', __name__, template_folder='templates')
 
->>>>>>> feature/drop-course
 @create_course_bp.route('/create_course/id=<id>')
 def home(id):
     courses = load_courses()
@@ -34,9 +14,6 @@ def home(id):
     # Store the professor's ID in the session for later use
     session['professor_id'] = id
 
-<<<<<<< HEAD
-    return render_template('create_course/home.html', courses=courses, professor=professor)
-=======
     # 分頁設定：每頁顯示 10 條課程
     page = request.args.get('page', 1, type=int)  # 默認頁面是 1
     per_page = 10  # 每頁顯示的課程數量
@@ -49,7 +26,6 @@ def home(id):
     total_pages = (len(courses) // per_page) + (1 if len(courses) % per_page > 0 else 0)
 
     return render_template('create_course/home.html', courses=paginated_courses, professor=professor, page=page, total_pages=total_pages)
->>>>>>> feature/drop-course
 
 @create_course_bp.route('/create_course/add_course', methods=['GET', 'POST'])
 def add_course():

@@ -1,42 +1,19 @@
 [
     {
-<<<<<<< HEAD
-        "id": "D1273865",
-        "name": "王人頡",
-        "role": "學生",
-        "password": "12345678",
-        "department": "資訊工程學系"
-    },
-    {
-        "id": "D1149279",
-        "name": "林昱岑",
-        "role": "學生",
-        "password": "20241116",
-=======
         "id": "D1149279",
         "name": "林昱岑",
         "role": "學生",
         "password": "1149279",
->>>>>>> feature/drop-course
         "department": "資訊工程學系"
     },
     {
         "id": "T1130001",
-<<<<<<< HEAD
-        "name": "吳振宇",
-        "role": "系辦助教",
-=======
         "name": "葉春秀",
         "role": "教授",
->>>>>>> feature/drop-course
         "password": "1130001",
         "department": "資訊工程學系"
     },
     {
-<<<<<<< HEAD
-        "id": "T1130012",
-        "name": "葉春秀",
-=======
         "id": "T1131000",
         "name": "吳振宇",
         "role": "系辦助教",
@@ -123,44 +100,18 @@
     {
         "id": "T1130012",
         "name": "陳青文",
->>>>>>> feature/drop-course
         "role": "教授",
         "password": "1130012",
         "department": "資訊工程學系"
     },
     {
-<<<<<<< HEAD
-        "id": "A1130123",
-        "name": "管很多",
-        "role": "教務處人員",
-        "password": "1130123",
-        "department": "教務處"
-    },
-    {
-        "id": "T1130013",
-        "name": "許芳榮",
-=======
         "id": "T1130013",
         "name": "劉宗杰",
->>>>>>> feature/drop-course
         "role": "教授",
         "password": "1130013",
         "department": "資訊工程學系"
     },
     {
-<<<<<<< HEAD
-        "id": "T1130018",
-        "name": "許懷中",
-        "role": "教授",
-        "password": "1130018",
-        "department": "資訊工程學系"
-    },
-    {
-        "id": "T1130019",
-        "name": "劉宗杰",
-        "role": "教授",
-        "password": "1130019",
-=======
         "id": "T1130014",
         "name": "林佩蓉",
         "role": "教授",
@@ -179,7 +130,6 @@
         "name": "陳孟捷",
         "role": "學生",
         "password": "1185282",
->>>>>>> feature/drop-course
         "department": "資訊工程學系"
     }
 ]

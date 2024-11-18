@@ -6,19 +6,12 @@ account_mgmt_bp = Blueprint('account_management', __name__, template_folder='tem
 DATABASE_PATH = 'database/accounts.json'
 
 def load_accounts():
-<<<<<<< HEAD
-    if os.path.exists(DATABASE_PATH):
-        with open(DATABASE_PATH, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return []
-=======
     try:
         with open(DATABASE_PATH, 'r', encoding='utf-8') as file:
             accounts = json.load(file)
     except FileNotFoundError:
         accounts = []
     return accounts
->>>>>>> feature/drop-course
 
 def save_accounts(accounts):
     with open(DATABASE_PATH, 'w', encoding='utf-8') as f:
@@ -35,10 +28,6 @@ def create_student_courses_file(id):
     
     # 預設的課程資料結構
     default_courses = {
-<<<<<<< HEAD
-        "id": id,
-=======
->>>>>>> feature/drop-course
         "courses": []
     }
     
@@ -59,14 +48,11 @@ def register():
     role = data.get('role')
     id = data.get('id')
 
-<<<<<<< HEAD
-=======
     accounts = load_accounts()
     if any(acc['id'] == id for acc in accounts):  # ID already exists
         flash('這個 ID 已經存在，請使用其他 ID。', 'danger')
         return redirect(url_for('account_management.index'))
 
->>>>>>> feature/drop-course
     new_account = {
         "id": id,
         "name": data.get('name'),
@@ -76,10 +62,6 @@ def register():
     if role in ['學生', '系辦助教', '教授', '教務處人員']:  # 如果是學生或教職員，可以設置系級
         new_account["department"] = data.get('department')
 
-<<<<<<< HEAD
-    accounts = load_accounts()
-=======
->>>>>>> feature/drop-course
     accounts.append(new_account)
     save_accounts(accounts)
 
@@ -91,10 +73,6 @@ def register():
 @account_mgmt_bp.route('/delete/<account_id>', methods=['POST'])
 def delete(account_id):
     accounts = load_accounts()
-<<<<<<< HEAD
-    accounts = [acc for acc in accounts if acc['id'] != account_id]
-    save_accounts(accounts)
-=======
     
     # 找到被刪除帳號
     account_to_delete = next((acc for acc in accounts if acc['id'] == account_id), None)
@@ -155,16 +133,12 @@ def delete(account_id):
     else:
         flash('找不到該帳號，無法刪除！', 'danger')
     
->>>>>>> feature/drop-course
     return redirect(url_for('account_management.index'))
 
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> feature/drop-course
 @account_mgmt_bp.route('/search', methods=['GET'])
 def search():
     query = request.args.get('query')
