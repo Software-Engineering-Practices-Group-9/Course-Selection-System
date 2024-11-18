@@ -181,13 +181,13 @@
         "description": "本課程主要內容介紹物件導向的基本觀念與程式技巧。學生將學習物件導向設計的概念、原則、方法與實作。修畢此課後，學生應具備使用物件導向特性，例如物件的封裝、繼承、多型等技巧來開發程式"
     },
     {
-        "status": "已開課",
+        "status": "已停開",
         "course_id": "1432",
         "course_name": "軟體工程開發實務",
         "instructor": "許懷中",
         "compulsory": "選修",
         "credits": 3,
-        "act_students": -1,
+        "act_students": 0,
         "max_students": 56,
         "day_of_week": {
             "一": [],

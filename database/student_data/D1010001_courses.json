@@ -6,13 +6,6 @@
             "credits": 2,
             "instructor": "葉春秀",
             "name": "程式設計與問題解決"
-        },
-        {
-            "compulsory": "選修",
-            "course_id": "1432",
-            "credits": 3,
-            "instructor": "許懷中",
-            "name": "軟體工程開發實務"
         }
     ]
 }
