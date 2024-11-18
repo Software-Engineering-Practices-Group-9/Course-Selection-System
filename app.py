@@ -1,3 +1,4 @@
+import os
 from flask import Flask
 from account_management.account_management import account_mgmt_bp
 from login_system.login import login_bp
@@ -10,6 +11,7 @@ from dotenv import load_dotenv
 app = Flask(__name__)
 
 load_dotenv()
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 app.register_blueprint(account_mgmt_bp, url_prefix='/account')
 app.register_blueprint(login_bp)
