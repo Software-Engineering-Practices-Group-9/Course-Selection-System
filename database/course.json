@@ -5,7 +5,7 @@
         "instructor": "葉春秀",
         "compulsory": "必修",
         "credits": 3,
-        "act_students": 0,
+        "act_students": 1,
         "max_students": 60,
         "day_of_week": {
             "一": [
@@ -28,7 +28,7 @@
         "instructor": "葉春秀",
         "compulsory": "必修",
         "credits": 1,
-        "act_students": 0,
+        "act_students": 1,
         "max_students": 60,
         "day_of_week": {
             "一": [],
@@ -72,7 +72,7 @@
         "instructor": "葉春秀",
         "compulsory": "選修",
         "credits": 2,
-        "act_students": 0,
+        "act_students": 1,
         "max_students": 60,
         "day_of_week": {
             "一": [],
@@ -136,7 +136,7 @@
         "instructor": "許懷中",
         "compulsory": "選修",
         "credits": 2,
-        "act_students": 0,
+        "act_students": 1,
         "max_students": 74,
         "day_of_week": {
             "一": [],
@@ -157,7 +157,7 @@
         "instructor": "許懷中",
         "compulsory": "選修",
         "credits": 1,
-        "act_students": 0,
+        "act_students": 1,
         "max_students": 76,
         "day_of_week": {
             "一": [],
@@ -178,7 +178,7 @@
         "instructor": "許懷中",
         "compulsory": "選修",
         "credits": 3,
-        "act_students": 0,
+        "act_students": 2,
         "max_students": 56,
         "day_of_week": {
             "一": [],
@@ -223,7 +223,7 @@
         "instructor": "游景盛",
         "compulsory": "必修",
         "credits": 3,
-        "act_students": 0,
+        "act_students": 1,
         "max_students": 60,
         "day_of_week": {
             "一": [
@@ -313,7 +313,7 @@
         "instructor": "李俊宏",
         "compulsory": "選修",
         "credits": 3,
-        "act_students": 0,
+        "act_students": 1,
         "max_students": 40,
         "day_of_week": {
             "一": [],
@@ -335,7 +335,7 @@
         "instructor": "陳烈武",
         "compulsory": "選修",
         "credits": 2,
-        "act_students": 0,
+        "act_students": 1,
         "max_students": 40,
         "day_of_week": {
             "一": [],
@@ -354,9 +354,9 @@
         "course_id": "3627",
         "course_name": "網路程式設計實習",
         "instructor": "陳烈武",
-        "compulsory": "必修",
+        "compulsory": "選修",
         "credits": 1,
-        "act_students": 0,
+        "act_students": 1,
         "max_students": 60,
         "day_of_week": {
             "一": [],
@@ -377,7 +377,7 @@
         "instructor": "陳烈武",
         "compulsory": "必修",
         "credits": 3,
-        "act_students": 0,
+        "act_students": 1,
         "max_students": 76,
         "day_of_week": {
             "一": [],
@@ -445,7 +445,7 @@
         "instructor": "陳青文",
         "compulsory": "選修",
         "credits": 3,
-        "act_students": 0,
+        "act_students": 1,
         "max_students": 76,
         "day_of_week": {
             "一": [
