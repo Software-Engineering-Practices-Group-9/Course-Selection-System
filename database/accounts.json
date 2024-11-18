@@ -208,5 +208,12 @@
         "role": "學生",
         "password": "1010010",
         "department": "資訊工程學系"
+    },
+    {
+        "id": "A0000123",
+        "name": "管很多",
+        "role": "教務處人員",
+        "password": "0000123",
+        "department": "教務處"
     }
 ]

@@ -1,25 +1,18 @@
 {
     "courses": [
         {
+            "compulsory": "選修",
             "course_id": "1450",
-            "name": "程式設計與問題解決",
-            "compulsory": "選修",
             "credits": 2,
-            "instructor": "葉春秀"
+            "instructor": "葉春秀",
+            "name": "程式設計與問題解決"
         },
         {
+            "compulsory": "選修",
             "course_id": "1432",
-            "name": "軟體工程開發實務",
-            "compulsory": "選修",
             "credits": 3,
-            "instructor": "許懷中"
-        },
-        {
-            "course_id": "1439",
-            "name": "編譯器",
-            "compulsory": "選修",
-            "credits": 3,
-            "instructor": "陳青文"
+            "instructor": "許懷中",
+            "name": "軟體工程開發實務"
         }
     ]
 }

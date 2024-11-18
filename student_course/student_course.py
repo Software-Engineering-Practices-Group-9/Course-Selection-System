@@ -20,6 +20,9 @@ def student_page(id):
     # 載入所有課程資料
     courses = load_courses()
 
+    # 過濾掉狀態為 "已停開" 的課程，僅顯示學生的課程列表
+    available_courses = [course for course in courses if course['status'] != '已停開']
+
     # 取得查詢條件
     course_id = request.args.get('course_id')
     course_name = request.args.get('course_name')
@@ -30,7 +33,7 @@ def student_page(id):
 
     # 使用篩選函式過濾課程
     filtered_courses = filter_courses(
-        courses,
+        available_courses,
         course_id=course_id,
         course_name=course_name,
         instructor=instructor,
@@ -49,7 +52,18 @@ def student_page(id):
     # 計算總頁數
     total_pages = (len(filtered_courses) // per_page) + (1 if len(filtered_courses) % per_page > 0 else 0)
 
-    return render_template('student_course/student.html', student=student, student_courses=student_courses, courses=paginated_courses, page=page, total_pages=total_pages, selected_course_ids=selected_course_ids, total_credits=total_credits)
+    # 傳遞資料到前端，包含所有課程
+    return render_template('student_course/student.html', 
+                           student=student, 
+                           student_courses=student_courses, 
+                           courses=paginated_courses,  # 開課的課程
+                           all_courses=courses,  # 所有課程，包含已停開課程
+                           page=page, 
+                           total_pages=total_pages, 
+                           selected_course_ids=selected_course_ids, 
+                           total_credits=total_credits)
+
+
 
 # -------------------------------- 加選功能 --------------------------------
 @student_course_bp.route('/add_course/<id>/<course_id>', methods=['POST'])
