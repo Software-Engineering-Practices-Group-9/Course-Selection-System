@@ -10,7 +10,7 @@
     <div class="container my-4">
         <h1 class="mt-5 d-flex justify-content-between align-items-center">
             登入資訊
-            <a href="{{ url_for('login.login') }}" class="btn btn-secondary">登出</a>
+            <a href="{{ url_for('login.logout') }}" class="btn btn-secondary">登出</a>
         </h1>
         <p>帳號：{{ student['id'] }}</p>
         <p>姓名：{{ student['name'] }}</p>

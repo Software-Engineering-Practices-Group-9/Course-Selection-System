@@ -210,10 +210,17 @@
         "department": "資訊工程學系"
     },
     {
-        "id": "A0000123",
-        "name": "管很多",
+        "id": "T1131001",
+        "name": "吳分身",
+        "role": "系辦助教",
+        "password": "1131001",
+        "department": "資訊工程學系"
+    },
+    {
+        "id": "A1139000",
+        "name": "admin",
         "role": "教務處人員",
-        "password": "0000123",
+        "password": "1139000",
         "department": "教務處"
     }
 ]

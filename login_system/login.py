@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, session, url_for
 import json
 
 login_bp = Blueprint('login', __name__, template_folder='templates')
@@ -28,3 +28,8 @@ def login():
                     return redirect(url_for('course_list.course_list', id=user_id))
         return render_template('login_system/login.html', error="帳號或密碼錯誤")
     return render_template('login_system/login.html')
+
+@login_bp.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('login.login'))

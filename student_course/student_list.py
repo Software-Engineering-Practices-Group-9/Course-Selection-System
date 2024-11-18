@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, session, url_for
 from account_management.account_management import load_accounts
 from student_course.search_course import filter_courses
 from utils import load_courses, load_student_courses
@@ -13,8 +13,8 @@ def student_list(id):
     query = request.args.get('query', '').strip()  # 搜索框的內容
     accounts = load_accounts()  # 加載所有賬戶
 
-    # 助教為 'T' 開頭
-    assistant = next((acc for acc in accounts if acc['id'].startswith('T')), None)
+    assistant = next((acc for acc in accounts if acc['id'] == id), None)
+    session['assistant_id'] = id
 
     # 過濾出角色為學生的賬戶（學生的ID以 'D' 開頭）
     students = [acc for acc in accounts if acc['id'].startswith('D')] 

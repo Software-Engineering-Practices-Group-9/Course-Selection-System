@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, render_template, request, url_for
+from flask import Blueprint, redirect, render_template, request, session, url_for
 from account_management.account_management import load_accounts
 from .search_course import filter_courses
 from utils import load_courses, load_student_courses
@@ -12,6 +12,7 @@ student_course_bp = Blueprint('student_course', __name__, template_folder='templ
 def student_page(id):
     accounts = load_accounts()
     student = next((acc for acc in accounts if acc['id'] == id), None)
+    session['student_id'] = id
 
     student_courses = load_student_courses(id)
     selected_course_ids = [course['course_id'] for course in student_courses]

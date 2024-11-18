@@ -137,7 +137,7 @@
         "description": "本課程藉由蘋果公司Swift Playgrounds 應用程式，使學生在遊戲式的情境中，學習基礎程式邏輯(指令、函數、條件式、迴圈以及演算法)，此外，亦可同時學習Swift 及Python程式語法。"
     },
     {
-        "status": "已開課",
+        "status": "已停開",
         "course_id": "1413",
         "course_name": "物件導向設計",
         "instructor": "許懷中",

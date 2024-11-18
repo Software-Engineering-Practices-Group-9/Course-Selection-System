@@ -9,7 +9,7 @@
     <div class="container my-4">
         <h1 class="mt-5 d-flex justify-content-between align-items-center">
             學生課程資訊
-            <a href="{{ url_for('student_list.student_list', id=assistant.id) }}" class="btn btn-secondary">返回</a>
+            <a href="{{ url_for('student_list.student_list', id=session['assistant_id']) }}" class="btn btn-secondary">返回</a>
         </h1>
         <p>帳號：{{ student['id'] }}</p>
         <p>姓名：{{ student['name'] }}</p>

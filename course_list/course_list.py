@@ -9,11 +9,10 @@ course_list_bp = Blueprint("course_list", __name__, template_folder="templates")
 def course_list(id):
     accounts = load_accounts()
     user = next((acc for acc in accounts if acc["id"] == id), None)
+    session["admin_id"] = id
 
     courses = load_courses()
 
-    # Store the professor's ID in the session for later use
-    session["professor_id"] = id
 
     course_id = request.args.get('course_id')
     course_name = request.args.get('course_name')
