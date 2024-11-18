@@ -187,7 +187,7 @@
         "instructor": "許懷中",
         "compulsory": "選修",
         "credits": 3,
-        "act_students": 0,
+        "act_students": -1,
         "max_students": 56,
         "day_of_week": {
             "一": [],
@@ -389,7 +389,7 @@
         "description": "實機練習各種主從式架構下網路程式設計及實作技能"
     },
     {
-        "status": "已開課",
+        "status": "已停開",
         "course_id": "1428",
         "course_name": "作業系統(一)",
         "instructor": "陳烈武",

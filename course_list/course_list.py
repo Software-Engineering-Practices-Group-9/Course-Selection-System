@@ -60,11 +60,11 @@ def cancel_course(course_id):
         try:
             save_courses(courses)
             remove_course_from_all_students(course_id)
-            return jsonify({"message": "退選成功！", "status": "success"}), 200
+            return jsonify({"message": "停開成功！", "status": "success"}), 200
         except Exception as e:
             return jsonify({"message": f"寫入文件失敗: {str(e)}", "status": "error"}), 500
     else:
-        return jsonify({"message": "退選失敗！課程代碼無效。", "status": "error"}), 400
+        return jsonify({"message": "停開失敗！課程代碼無效。", "status": "error"}), 400
     
 @course_list_bp.route("/remove_course/course_id=<course_id>", methods=["POST"])
 def remove_course(course_id):

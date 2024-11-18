@@ -15,6 +15,14 @@
             
             <div class="login-box">
                 <h3 class="text-center mb-3">系統登入</h3>
+
+                <!-- 顯示錯誤訊息 -->
+                {% if error %}
+                    <div id="error-message" class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </div>
+                {% endif %}
+                
                 <form method="post">
                     <div class="mb-3">
                         <label for="id" class="form-label">帳號 (ID)</label>
@@ -35,6 +43,8 @@
 
     </div>
     
+    <script src="/static/js/login.js"></script>
+
 </body>
 </html>
 

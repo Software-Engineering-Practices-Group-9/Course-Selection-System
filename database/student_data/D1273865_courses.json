@@ -9,13 +9,6 @@
         },
         {
             "compulsory": "選修",
-            "course_id": "1432",
-            "credits": 3,
-            "instructor": "許懷中",
-            "name": "軟體工程開發實務"
-        },
-        {
-            "compulsory": "選修",
             "course_id": "1433",
             "credits": 3,
             "instructor": "李俊宏",
@@ -34,13 +27,6 @@
             "credits": 1,
             "instructor": "陳烈武",
             "name": "網路程式設計實習"
-        },
-        {
-            "compulsory": "必修",
-            "course_id": "1428",
-            "credits": 3,
-            "instructor": "陳烈武",
-            "name": "作業系統(一)"
         },
         {
             "compulsory": "選修",
