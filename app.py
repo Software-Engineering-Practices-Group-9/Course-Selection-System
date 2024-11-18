@@ -12,10 +12,10 @@ app.config['SECRET_KEY'] = 'efb658580b34b7c6a6e15208b8ba545d'
 
 app.register_blueprint(account_mgmt_bp, url_prefix='/account')
 app.register_blueprint(login_bp)
-app.register_blueprint(student_course_bp, url_prefix='/student_course')
-app.register_blueprint(student_list_bp, url_prefix='/student_list')
-app.register_blueprint(course_list_bp, url_prefix='/course_list')
 app.register_blueprint(create_course_bp, url_prefix='/create_course')
+app.register_blueprint(course_list_bp, url_prefix='/course_list')
+app.register_blueprint(student_list_bp, url_prefix='/student_list')
+app.register_blueprint(student_course_bp, url_prefix='/student_course')
 
 if __name__ == "__main__":
     app.run(debug=True)
