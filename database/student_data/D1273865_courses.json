@@ -1,3 +1,74 @@
 {
-    "courses": []
+    "courses": [
+        {
+            "course_id": "1409",
+            "name": "資料結構",
+            "compulsory": "必修",
+            "credits": 3,
+            "instructor": "葉春秀"
+        },
+        {
+            "course_id": "1408",
+            "name": "資料結構實習",
+            "compulsory": "必修",
+            "credits": 1,
+            "instructor": "葉春秀"
+        },
+        {
+            "course_id": "1450",
+            "name": "程式設計與問題解決",
+            "compulsory": "選修",
+            "credits": 2,
+            "instructor": "葉春秀"
+        },
+        {
+            "course_id": "2776",
+            "name": "專案管理",
+            "compulsory": "選修",
+            "credits": 3,
+            "instructor": "葉春秀"
+        },
+        {
+            "course_id": "3678",
+            "name": "遊戲化模組學習法之程式設計",
+            "compulsory": "選修",
+            "credits": 2,
+            "instructor": "葉春秀"
+        },
+        {
+            "course_id": "1413",
+            "name": "物件導向設計",
+            "compulsory": "選修",
+            "credits": 2,
+            "instructor": "許懷中"
+        },
+        {
+            "course_id": "1432",
+            "name": "軟體工程開發實務",
+            "compulsory": "選修",
+            "credits": 3,
+            "instructor": "許懷中"
+        },
+        {
+            "course_id": "1422",
+            "name": "作業系統(一)",
+            "compulsory": "必修",
+            "credits": 3,
+            "instructor": "林志敏"
+        },
+        {
+            "course_id": "1410",
+            "name": "離散數學",
+            "compulsory": "必修",
+            "credits": 3,
+            "instructor": "游景盛"
+        },
+        {
+            "course_id": "3626",
+            "name": "網路程式設計",
+            "compulsory": "選修",
+            "credits": 2,
+            "instructor": "陳烈武"
+        }
+    ]
 }
