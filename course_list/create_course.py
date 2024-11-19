@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for, session
+from flask import Blueprint, flash, render_template, request, redirect, url_for, session
 from account_management.account_management import load_accounts
 from utils import save_courses, load_courses
 
@@ -37,11 +37,10 @@ def add_course():
 
         # 獲取手動輸入的課程代碼
         course_id = request.form['course_id']
-        
-        # 檢查課程代碼是否已存在
+
         if any(course['course_id'] == course_id for course in courses):
-            # 如果需要，這裡可以加入錯誤處理，例如回傳錯誤訊息
-            return "課程代碼已存在，請使用其他代碼", 400
+            flash("該課程已存在!", "error")  # 使用flash傳遞錯誤訊息
+            return redirect(url_for('create_course.add_course'))  # 重導回新增課程頁面
         
         course_name = request.form['course_name']
         compulsory = request.form['compulsory']

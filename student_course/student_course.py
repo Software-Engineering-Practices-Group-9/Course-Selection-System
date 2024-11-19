@@ -21,7 +21,7 @@ def student_page(id):
     # 載入所有課程資料
     courses = load_courses()
 
-    # 過濾掉狀態為 "已停開" 的課程，僅顯示學生的課程列表
+    # 過濾掉狀態為 "已停開" 的課程
     available_courses = [course for course in courses if course['status'] != '已停開']
 
     # 取得查詢條件

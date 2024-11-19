@@ -43,6 +43,9 @@ def student_courses(id):
     # 載入所有課程資料
     courses = load_courses()
 
+    # 過濾掉狀態為 "已停開" 的課程
+    available_courses = [course for course in courses if course['status'] != '已停開']
+
     # 取得查詢條件
     course_id = request.args.get('course_id')
     course_name = request.args.get('course_name')
@@ -50,7 +53,7 @@ def student_courses(id):
 
     # 使用篩選函式過濾課程
     filtered_courses = filter_courses(
-        courses,
+        available_courses,
         course_id=course_id,
         course_name=course_name,
         instructor=instructor

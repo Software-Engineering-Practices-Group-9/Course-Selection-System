@@ -14,8 +14,23 @@
             新增課程
             <a href="{{ url_for('create_course.home', id=session['professor_id']) }}" class="btn btn-secondary">返回</a>
         </h1>
-        <form onsubmit="return validateForm()" action="{{ url_for('create_course.add_course') }}" method="POST">
 
+        <!-- 顯示錯誤訊息 -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="alert-container">
+                {% for category, message in messages %}
+                    {% if category == 'error' %}
+                        <script type="text/javascript">
+                            alert("{{ message }}");  // 彈跳提示錯誤訊息
+                        </script>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+
+        <form onsubmit="return validateForm()" action="{{ url_for('create_course.add_course') }}" method="POST">
             <!-- 課程名稱 -->
             <div class="mb-3">
                 <label for="course_id" class="form-label">課程代碼:</label>
