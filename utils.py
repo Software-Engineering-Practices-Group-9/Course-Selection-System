@@ -1,7 +1,7 @@
 # 這裡放置載入、刪除課程等函式
 import json
-from collections import OrderedDict
-import os # 使用該模組固定json字典順序
+from collections import OrderedDict # 使用該模組固定json字典順序
+import os
 
 # 載入所有帳號
 def load_accounts():
