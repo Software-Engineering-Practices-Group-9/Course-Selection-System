@@ -6,7 +6,7 @@
         "instructor": "葉春秀",
         "compulsory": "必修",
         "credits": 3,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 60,
         "day_of_week": {
             "一": [
@@ -30,7 +30,7 @@
         "instructor": "葉春秀",
         "compulsory": "必修",
         "credits": 1,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 60,
         "day_of_week": {
             "一": [],
@@ -76,7 +76,7 @@
         "instructor": "葉春秀",
         "compulsory": "選修",
         "credits": 2,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 60,
         "day_of_week": {
             "一": [],
@@ -98,7 +98,7 @@
         "instructor": "葉春秀",
         "compulsory": "選修",
         "credits": 3,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 17,
         "day_of_week": {
             "一": [],
@@ -121,7 +121,7 @@
         "instructor": "葉春秀",
         "compulsory": "選修",
         "credits": 2,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 30,
         "day_of_week": {
             "一": [],
@@ -143,7 +143,7 @@
         "instructor": "許懷中",
         "compulsory": "選修",
         "credits": 2,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 74,
         "day_of_week": {
             "一": [],
@@ -187,7 +187,7 @@
         "instructor": "許懷中",
         "compulsory": "選修",
         "credits": 3,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 56,
         "day_of_week": {
             "一": [],
@@ -210,7 +210,7 @@
         "instructor": "林志敏",
         "compulsory": "必修",
         "credits": 3,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 72,
         "day_of_week": {
             "一": [
@@ -234,7 +234,7 @@
         "instructor": "游景盛",
         "compulsory": "必修",
         "credits": 3,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 60,
         "day_of_week": {
             "一": [
@@ -351,7 +351,7 @@
         "instructor": "陳烈武",
         "compulsory": "選修",
         "credits": 2,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 40,
         "day_of_week": {
             "一": [],
