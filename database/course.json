@@ -443,7 +443,7 @@
         "instructor": "陳青文",
         "compulsory": "必修",
         "credits": 1,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 69,
         "day_of_week": {
             "一": [],
@@ -490,7 +490,7 @@
         "instructor": "劉宗杰",
         "compulsory": "必修",
         "credits": 3,
-        "act_students": 1,
+        "act_students": 0,
         "max_students": 69,
         "day_of_week": {
             "一": [
