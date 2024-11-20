@@ -16,9 +16,7 @@ def home(id):
 
     # 分頁設定：每頁顯示 10 條課程
     page = request.args.get('page', 1, type=int)  # 默認頁面是 1
-    per_page = 10  # 每頁顯示的課程數量
-
-    # 使用 Flask-Paginate 模組的 pagination
+    per_page = 10
     start = (page - 1) * per_page
     end = start + per_page
     paginated_courses = courses[start:end]
