@@ -20,6 +20,5 @@ app.register_blueprint(course_list_bp, url_prefix='/course_list')
 app.register_blueprint(student_list_bp, url_prefix='/student_list')
 app.register_blueprint(student_course_bp, url_prefix='/student_course')
 
-
 if __name__ == "__main__":
     app.run(debug=True)
